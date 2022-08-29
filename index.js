@@ -33,12 +33,10 @@ function alien(hp, coordinates, speed) {
   this.coordinates = { "x": coordinates.x, "y": coordinates.y }
   this.speed = { "x": speed.x, "y": speed.y }
   this.move = function () {
-    this.coordinates.x = this.speed.x + this.coordinates.x
-    console.log(this.coordinates.x)
-
+    this.coordinates.x += this.speed.x
+    this.coordinates.y += this.speed.y
   }
-
-}
+};
 
 const ali= new alien(10,{"x":5, "y":14},{"x":7,"y":6});
 console.log(ali.move());
